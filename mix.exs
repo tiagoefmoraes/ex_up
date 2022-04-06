@@ -21,6 +21,7 @@ defmodule ExUp.MixProject do
         "test.watch": :test
       ],
       aliases: aliases(),
+      test_coverage: [tool: SpryCov],
       deps: deps()
     ]
   end
@@ -52,6 +53,7 @@ defmodule ExUp.MixProject do
 
   defp aliases do
     [
+      test: "test --cover",
       version: fn _ -> IO.puts(@version) end
     ]
   end
@@ -68,6 +70,7 @@ defmodule ExUp.MixProject do
   defp deps do
     [
       {:mix_test_watch, "~> 1.0", only: [:dev, :test], runtime: false},
+      {:spry_cov, "~> 0.2.0", only: [:test]},
       {:stream_data, "~> 0.5", only: [:dev, :test]},
       {:ex_doc, "~> 0.28", only: :dev, runtime: false}
     ]
