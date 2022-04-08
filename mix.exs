@@ -70,7 +70,7 @@ defmodule ExUp.MixProject do
   defp deps do
     [
       {:mix_test_watch, "~> 1.0", only: [:dev, :test], runtime: false},
-      {:spry_cov, "~> 0.2.0", only: [:test]},
+      {:spry_cov, "~> 0.3.0", only: [:test]},
       {:stream_data, "~> 0.5", only: [:dev, :test]},
       {:ex_doc, "~> 0.28", only: :dev, runtime: false}
     ]
